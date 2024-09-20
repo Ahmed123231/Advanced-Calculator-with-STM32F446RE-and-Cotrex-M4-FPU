@@ -1,0 +1,3 @@
+../Src/KeyPad_prog.c:36:6:KEYPAD_init	16	static
+../Src/KeyPad_prog.c:75:9:KEYPAD_GetPressedKey	32	static
+../Src/KeyPad_prog.c:126:10:GetNumberFromKeypad	16	static

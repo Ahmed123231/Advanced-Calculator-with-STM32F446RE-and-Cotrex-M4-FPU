@@ -1,0 +1,4 @@
+../Src/GPIO_prog.c:31:9:GPIO_u8PinInit	24	static
+../Src/GPIO_prog.c:89:9:GPIO_u8SetPinValue	24	static
+../Src/GPIO_prog.c:140:9:GPIO_u8TogglePinValue	24	static
+../Src/GPIO_prog.c:170:9:GPIO_u8ReadPinValue	24	static

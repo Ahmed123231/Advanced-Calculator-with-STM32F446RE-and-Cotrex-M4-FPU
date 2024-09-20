@@ -1,0 +1,5 @@
+../Src/calculator.c:31:6:resetCalculator	8	static
+../Src/calculator.c:42:6:handleNumberInput	16	static
+../Src/calculator.c:53:6:handleOperatorInput	16	static
+../Src/calculator.c:62:6:calculateResult	8	static
+../Src/calculator.c:90:6:calculatorLoop	16	static

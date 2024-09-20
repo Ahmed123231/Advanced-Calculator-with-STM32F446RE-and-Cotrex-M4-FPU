@@ -1,0 +1,14 @@
+../Src/RCC_prog.c:16:9:RCC_SetClkStatus	3
+../Src/RCC_prog.c:42:9:RCC_SetSysClk	3
+../Src/RCC_prog.c:68:9:RCC_HSE_Mode	3
+../Src/RCC_prog.c:89:9:RCC_PLL_Config	13
+../Src/RCC_prog.c:152:9:RCC_AHB1_EnableClk	2
+../Src/RCC_prog.c:167:9:RCC_AHB1_DisableClk	2
+../Src/RCC_prog.c:182:9:RCC_AHB2_EnableClk	2
+../Src/RCC_prog.c:197:9:RCC_AHB2_DisableClk	2
+../Src/RCC_prog.c:212:9:RCC_AHB3_EnableClk	2
+../Src/RCC_prog.c:227:9:RCC_AHB3_DisableClk	2
+../Src/RCC_prog.c:242:9:RCC_APB1_EnableClk	2
+../Src/RCC_prog.c:257:9:RCC_APB1_DisableClk	2
+../Src/RCC_prog.c:272:9:RCC_APB2_EnableClk	2
+../Src/RCC_prog.c:287:9:RCC_APB2_DisableClk	2

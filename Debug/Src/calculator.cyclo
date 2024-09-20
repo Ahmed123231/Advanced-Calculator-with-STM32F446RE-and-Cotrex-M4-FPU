@@ -1,0 +1,5 @@
+../Src/calculator.c:31:6:resetCalculator	1
+../Src/calculator.c:42:6:handleNumberInput	2
+../Src/calculator.c:53:6:handleOperatorInput	2
+../Src/calculator.c:62:6:calculateResult	6
+../Src/calculator.c:90:6:calculatorLoop	10

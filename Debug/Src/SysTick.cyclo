@@ -1,0 +1,2 @@
+../Src/SysTick.c:18:9:SysTick_delay_ms	5
+../Src/SysTick.c:61:9:SysTick_delay_us	2
