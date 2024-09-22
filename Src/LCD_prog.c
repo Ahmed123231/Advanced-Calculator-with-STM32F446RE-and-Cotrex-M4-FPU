@@ -69,7 +69,7 @@ void LCD_voidSendLowerNibble(uint8_t copy_u8data) {
 	        // Since PIN_HIGH is 0 and PIN_LOW is 1, we invert the logic
 	    	PinVal_t pinValue = (GET_BIT(copy_u8data, Loc_u8_iterator)) ? PIN_HIGH : PIN_LOW;
 
-	        //HAL_GPIO_WritePin(LCD_DPORT,array_pin[Loc_u8_iterator],pinValue);
+	        
 	        GPIO_u8SetPinValue(LCD_DPORT,array_pin[Loc_u8_iterator],pinValue);
 	    }
 }
@@ -79,20 +79,20 @@ void LCD_voidSetEnable(void) {
     /******** SET EN PIN HIGH *********/
 	//HAL_GPIO_WritePin(LCD_CPORT, LCD_EN_PIN, GPIO_PIN_SET);
 	GPIO_u8SetPinValue(LCD_CPORT, LCD_EN_PIN,PIN_HIGH);
-    //HAL_Delay(2);
+    
     SysTick_delay_ms(2);
     /******** SET EN PIN LOW *********/
-    //HAL_GPIO_WritePin(LCD_CPORT, LCD_EN_PIN, GPIO_PIN_RESET);
+    
     GPIO_u8SetPinValue(LCD_CPORT, LCD_EN_PIN,PIN_LOW);
 }
 
 /************* LCD Command Send Function ************/
 void LCD_voidSendCommand(uint8_t copy_u8command) {
     /* Clear RS PIN to Send Command */
-	//HAL_GPIO_WritePin(LCD_CPORT, LCD_RS_PIN,GPIO_PIN_RESET);
+	
 	GPIO_u8SetPinValue(LCD_CPORT, LCD_RS_PIN,PIN_LOW);
     /* Clear RW PIN to Send Data */
-	//HAL_GPIO_WritePin(LCD_CPORT, LCD_RW_PIN,GPIO_PIN_RESET);
+	
 	GPIO_u8SetPinValue(LCD_CPORT,LCD_RW_PIN,PIN_LOW);
 
 
@@ -106,12 +106,12 @@ void LCD_voidSendCommand(uint8_t copy_u8command) {
 /************* LCD Data Send Function ************/
 void LCD_voidSendData(uint8_t copy_u8data) {
     /* SET RS PIN to Send Data */
-	//HAL_GPIO_WritePin(LCD_CPORT, LCD_RS_PIN, GPIO_PIN_SET);
-	GPIO_u8SetPinValue(LCD_CPORT, LCD_RS_PIN,PIN_HIGH);
+	
+    GPIO_u8SetPinValue(LCD_CPORT, LCD_RS_PIN,PIN_HIGH);
 
     /* Clear RW PIN to Send Data */
-	//HAL_GPIO_WritePin(LCD_CPORT, LCD_RW_PIN, GPIO_PIN_RESET);
-	GPIO_u8SetPinValue(LCD_CPORT,LCD_RW_PIN,PIN_LOW);
+	
+    GPIO_u8SetPinValue(LCD_CPORT,LCD_RW_PIN,PIN_LOW);
     /*** Send Data ***/
 
     LCD_voidSendLowerNibble(copy_u8data >> 4);
@@ -123,8 +123,8 @@ void LCD_voidSendData(uint8_t copy_u8data) {
 
 /************* LCD Initialization Function 8-bit Mode ************/
 void LCD_voidInit(void) {
-	//HAL_Delay(40);
-	SysTick_delay_ms(150);
+	
+    SysTick_delay_ms(150);
     /* Send Function Set */
 
     LCD_voidSendLowerNibble(0b0010);
